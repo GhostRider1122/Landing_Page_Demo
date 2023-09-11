@@ -1,0 +1,270 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    
+}
+
+.logo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%; /* Make the logo circular */
+    margin-right: 32rem;
+}
+
+/* Styling for the navigation bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    flex-wrap: wrap; 
+}
+
+.logo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 2rem;
+    margin: 0; /* Reset margin for smaller screens */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-right: 3rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.sign-up {
+    margin-left: 2rem;
+    margin: 1rem 0; /* Add space around the sign-up button */
+}
+
+.sign-up a {
+    text-decoration: none;
+    color: #f39c12;
+    border: 1px solid #f39c12;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.sign-up a svg {
+    fill: #f39c12;
+    margin-right: 0.5rem;
+}
+
+/* Styling for the About Us section */
+.about-us {
+    background-color: #f9f9f9;
+    padding: 4rem 0;
+    text-align: center;
+    padding: 3rem 0; /* Reduce top and bottom padding on smaller screens */
+}
+
+.about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.hero {
+    text-align: center;
+    padding: 5rem 0;
+    background-image: url('assets/background/hero.jpg');
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #f39c12;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+/* Styling for the Features section */
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+    padding: 3rem 0; /* Reduce top and bottom padding on smaller screens */
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    
+}
+
+.feature {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 3rem;
+}
+
+.feature:nth-child(odd) .feature-image {
+    order: 1;
+    text-align: left;
+    margin-right: 2rem;
+}
+
+
+.feature-image img {
+    height: auto;
+    width: 100%; /* Make images full width on smaller screens */
+    max-width: none; /* Reset max-width */
+}
+
+.feature-text {
+    flex: 1;
+    padding: 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: row-reverse; /* Change to column layout */
+    align-items: center; /* Center items horizontally */
+    padding: 2rem 0;
+}
+
+.menu-toggle {
+    display: none; /* Hide by default */
+    cursor: pointer;
+    margin-left: auto; /* Move to the right side */
+}
+
+.menu-toggle i {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide navigation links */
+        flex-direction: column; /* Stack links vertically */
+        background-color: #333;
+        position: absolute;
+        width: 100%;
+        top: 4rem; /* Place menu below the logo */
+        left: 0;
+        z-index: 1;
+    }
+
+    .sign-up {
+        margin: 0; /* Reset margin for smaller screens */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show navigation links when menu is active */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the menu toggle on smaller screens */
+    }
+
+    nav {
+        justify-content: flex-start; /* Align logo and toggle to the left */
+    }
+
+    .nav-links li {
+        padding: 1rem;
+    }
+}
+
+.contact-feedback {
+    display: flex; /* Display contact and feedback in the same row */
+    justify-content: space-between; /* Distribute them across the row */
+    width: 100%;
+}
+
+.contact-info, .feedback-form, .copyright {
+    width: 100%; /* Occupy full width of the footer */
+    padding: 1rem;
+    text-align: center; /* Center text and content */
+}
+
+.contact-info h2, .feedback-form h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.feedback-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-form label {
+    margin-top: 0.5rem;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    padding: 0.5rem;
+    margin-top: 0.2rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.feedback-form button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background-color: #e62222;
+}
+
+footer .copyright {
+    margin-top: auto; /* Push the copyright section to the bottom */
+    font-size: 0.8rem; /* Adjust font size */
+}
