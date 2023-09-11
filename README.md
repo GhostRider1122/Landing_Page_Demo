@@ -24,4 +24,4 @@ Hotel Paradise Landing Page is a responsive web page designed to showcase the fe
 1. Clone the repository:
 
    ```bash
-   git@github.com:GhostRider1122/Landing_Page_Demo.git
+   [git@github.com:GhostRider1122/Landing_Page_Demo.git](https://github.com/GhostRider1122/Landing_Page_Demo.git)https://github.com/GhostRider1122/Landing_Page_Demo.git
